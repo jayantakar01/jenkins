@@ -1,7 +1,5 @@
     provider "aws" {
-    access_key = "${var.awsaccesskey}"
-    secret_key = "${var.awssecretkey}"
-    region = "us-east-2"
+    profile = "default"
 }
 
 locals {
