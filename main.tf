@@ -10,7 +10,6 @@ locals {
 resource "aws_instance" "Demo1" {
   ami           = "${var.ami}"
   instance_type = "t2.micro"
-  iam_instance_profile = "${aws_iam_instance_profile.test_profile.name}"
   subnet_id = aws_subnet.Demo_public1.id
   vpc_security_group_ids = [aws_security_group.allow-ssh.id]
   key_name = "${var.key_pair}"
